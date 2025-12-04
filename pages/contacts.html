@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Контакты - ПОРТФОЛИО</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="bg-light">
+    <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+    <div class="page-container">
+        <header class="bg-primary text-white py-4" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="h3 mb-1">ПОРТФОЛИО</h1>
+                        <p class="mb-0 opacity-75">Студентка разработчица</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <span class="badge bg-light text-primary">ЭФБО-03-24</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation" aria-label="Основная навигация">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Проекты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="diary.html">Дневник</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main id="main-content" class="container my-5" role="main">
+            <section id="contacts-section">
+                <h1 class="section-title">Свяжитесь со мной</h1>
+
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="card-title h5 mb-0">Контактная информация</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center contact-item">
+                                    <div class="contact-icon">✉️</div>
+                                    <p class="mb-2"><strong>Email:</strong><br>evhnud@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center contact-item">
+                                    <div class="contact-icon">📱</div>
+                                    <p class="mb-2"><strong>Телефон:</strong><br>+7 (999) 000-00-00</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center contact-item">
+                                    <div class="contact-icon">📍</div>
+                                    <p class="mb-0"><strong>Адрес:</strong><br>г. Москва, ул. Котиков, д. 27</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#feedbackModal" aria-label="Открыть форму обратной связи">
+                        Написать сообщение
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-white py-5 mt-auto" role="contentinfo">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025. Портфолио студентки</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for Feedback Form -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h2 class="modal-title h5" id="feedbackModalLabel">Форма обратной связи</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="feedbackForm" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                Имя <span class="text-danger" aria-hidden="true">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="name" name="name" required 
+                                   aria-required="true" aria-describedby="name-help" placeholder="Введите ваше имя">
+                            <div id="name-help" class="form-text">Введите ваше полное имя</div>
+                            <div class="invalid-feedback" id="name-error">Пожалуйста, введите ваше имя</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">
+                                Телефон <span class="text-danger" aria-hidden="true">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required 
+                                   aria-required="true" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                   aria-describedby="phone-help" placeholder="+7 (999) 000-00-00">
+                            <div id="phone-help" class="form-text">Формат: +7 (999) 000-00-00</div>
+                            <div class="invalid-feedback" id="phone-error">Пожалуйста, введите корректный номер телефона</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Электронная почта <span class="text-danger" aria-hidden="true">*</span>
+                            </label>
+                            <input type="email" class="form-control" id="email" name="email" required 
+                                   aria-required="true" aria-describedby="email-help" placeholder="example@mail.ru">
+                            <div id="email-help" class="form-text">Мы отправим ответ на этот адрес</div>
+                            <div class="invalid-feedback" id="email-error">Пожалуйста, введите корректный email адрес</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="category" class="form-label">
+                                Категория обращения <span class="text-danger" aria-hidden="true">*</span>
+                            </label>
+                            <select id="category" name="category" class="form-select" required aria-required="true">
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <div class="invalid-feedback" id="category-error">Пожалуйста, выберите категорию обращения</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">
+                                Текст обращения <span class="text-danger" aria-hidden="true">*</span>
+                            </label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required 
+                                      aria-required="true" aria-describedby="message-help"
+                                      placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                            <div id="message-help" class="form-text">Опишите подробно ваш вопрос или предложение</div>
+                            <div class="invalid-feedback" id="message-error">Пожалуйста, введите текст обращения</div>
+                        </div>
+
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомление об успешной отправке -->
+    <div id="success-message" class="alert alert-success alert-dismissible fade position-fixed top-0 start-50 translate-middle-x mt-3" 
+         role="alert" aria-live="polite" aria-atomic="true" style="display: none; z-index: 1060;">
+        <div class="d-flex align-items-center">
+            <span>Сообщение успешно отправлено!</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/contact.js"></script>
+</body>
+</html>
